@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913183415) do
+ActiveRecord::Schema.define(version: 20160913183756) do
 
   create_table "routines", force: :cascade do |t|
     t.string   "name"
-    t.string   "focus"
+    t.integer  "focus"
     t.string   "description"
     t.integer  "frequency"
     t.integer  "user_id"
