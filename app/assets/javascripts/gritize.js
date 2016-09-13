@@ -4,7 +4,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/home',
-        templateUrl: '_home.html',
+        templateUrl: '/home/_home.html',
         controller: 'HomeCtrl'
       });
       $urlRouterProvider.otherwise('home');
