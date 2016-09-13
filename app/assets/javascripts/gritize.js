@@ -1,2 +1,11 @@
 angular
-  .module('gritize',['ui-router', 'templates']);
+  .module('gritize',['ui-router', 'templates'])
+  .config(['$stateProvider', '$urlRouterProvider', function ($urlRouterProvider, $stateProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/home',
+        templateUrl: 'home.html',
+        controller: 'HomeCtrl'
+      });
+      $urlRouterProvider.otherwise('home');
+    }])
