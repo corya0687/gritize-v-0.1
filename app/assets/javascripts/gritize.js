@@ -7,5 +7,18 @@ angular
         templateUrl: 'home/_home.html',
         controller: 'HomeController'
       });
+      .state('routines', {
+        url: '/routines/{id}',
+        templateUrl: '/routines.html',
+        controller: 'RoutineController'
+        controllerAs: 'RoutineCtrl',
+        resolve: {
+          routine: function($stateParams, RoutineService) {
+            return RoutineService.getRoutine($stateParams.id)
+          }
+        }
+      })
+
       $urlRouterProvider.otherwise('home');
+
     }])
