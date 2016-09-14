@@ -1,16 +1,16 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine only: [:show]
+  before_action :set_routine, only: [:show]
 
   def index
     @routines = Routine.all
-    respond_to do |f|
-      f.json {render json: @routines}
+    respond_to do |format|
+      format.json {render json: @routines}
     end
   end
 
   def show
-    respond_to do |f|
-      f.json {render json: @routine}
+    respond_to do |format|
+      format.json {render json: @routine}
     end
   end
 
@@ -21,6 +21,6 @@ class RoutinesController < ApplicationController
   end
 
   def routine_params
-    params.require(:routine).permit(:name, :description, :end_date :tags => [])
+    params.require(:routine).permit(:name, :description, :end_date, :tags => [])
   end
 end
