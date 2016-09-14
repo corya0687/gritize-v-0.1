@@ -1,8 +1,10 @@
 var RoutineTableRow = {
   restrict: 'E',
-  controller: 'RoutineController',
+  controller: function () {
+
+  },
   controllerAs: 'routineCtrl',
-  templateUrl: 'routine/_routine.html',
+  templateUrl: 'routine/routine.html',
   bindings: {
     routine: '='
   }
