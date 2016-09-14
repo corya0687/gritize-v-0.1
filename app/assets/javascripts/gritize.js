@@ -6,11 +6,12 @@ angular
         url: '/home',
         templateUrl: 'home/_home.html',
         controller: 'HomeController'
-      });
+      })
+
       .state('routines', {
         url: '/routines/{id}',
-        templateUrl: '/routines.html',
-        controller: 'RoutineController'
+        templateUrl: '/routine.html',
+        controller: 'RoutineController',
         controllerAs: 'RoutineCtrl',
         resolve: {
           routine: function($stateParams, RoutineService) {

@@ -1,5 +1,5 @@
 function RoutineController() {
-
+  debugger;
 }
 
 angular

@@ -2,7 +2,7 @@
 
 * [X] Rails/Angular connected
 * [ ] Build Routine page
-  - Need to Build seed routine data
+  - Angular Routes not working
 * [ ] Setup Devise
 * [ ] Setup Bootstrap
 * [ ] Build Registration and Sign up page
