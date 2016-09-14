@@ -10,7 +10,7 @@ angular
 
       .state('routine', {
         url: '/routines/:id',
-        templateUrl: 'routine/show.html',
+        templateUrl: 'routine/show_routine.html',
         controller: 'RoutineController as routineCtrl',
         resolve: {
           routine: function($stateParams, RoutinesService) {

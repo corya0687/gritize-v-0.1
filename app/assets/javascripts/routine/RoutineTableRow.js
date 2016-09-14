@@ -4,7 +4,7 @@ var RoutineTableRow = {
 
   },
   controllerAs: 'routineCtrl',
-  templateUrl: 'routine/routine.html',
+  templateUrl: 'routine/_routine.html',
   bindings: {
     routine: '='
   }
