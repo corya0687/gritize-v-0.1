@@ -4,5 +4,5 @@
 * [ ] Build Routine page
 * [ ] Setup Devise
 * [ ] Setup Bootstrap
-* [ ] Build Registraion and Sign up page
+* [ ] Build Registration and Sign up page
 * [ ] Build Subroutine models and views
