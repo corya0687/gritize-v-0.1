@@ -1,0 +1,2 @@
+class RoutineTagsController < ApplicationController
+end

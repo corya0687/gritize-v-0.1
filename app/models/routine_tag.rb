@@ -1,0 +1,2 @@
+class RoutineTag < ApplicationRecord
+end
