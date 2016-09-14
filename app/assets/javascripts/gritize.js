@@ -13,8 +13,8 @@ angular
         templateUrl: 'routine/_routine.html',
         controller: 'RoutineController as routineCtrl',
         resolve: {
-          routine: function($stateParams, RoutineService) {
-            return RoutineService.getRoutine($stateParams.id)
+          routine: function($stateParams, RoutinesService) {
+            return RoutinesService.getRoutine($stateParams.id)
           }
         }
       });

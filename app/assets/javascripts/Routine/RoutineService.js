@@ -1,4 +1,4 @@
-function RoutineService($http) {
+function RoutinesService($http) {
   this.getRoutineIndex = function(){
     return $http.get('/routines.json')
   }
@@ -10,4 +10,4 @@ function RoutineService($http) {
 
 angular
   .module('gritize')
-  .service('RoutineService', RoutineService)
+  .service('RoutinesService', RoutinesService)
