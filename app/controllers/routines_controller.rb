@@ -3,10 +3,15 @@ class RoutinesController < ApplicationController
 
   def index
     @routines = Routine.all
+    respond_to do |f|
+      f.json {render json: @routines}
+    end
   end
 
   def show
-
+    respond_to do |f|
+      f.json {render json: @routine}
+    end
   end
 
   private
