@@ -1,3 +1,3 @@
 class RoutineSerializer < ActiveModel::Serializer
-  attributes :id, :description, :user_id, :end_date
+  attributes :id, :name, :description, :user_id, :end_date
 end
