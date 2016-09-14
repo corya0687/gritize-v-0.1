@@ -1,5 +1,7 @@
-function RoutineController() {
-  debugger;
+function RoutineController(routine) {
+  var ctrl = this
+
+  this.goat = "hey"
 }
 
 angular

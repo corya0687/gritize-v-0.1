@@ -8,18 +8,17 @@ angular
         controller: 'HomeController'
       })
 
-      .state('routines', {
-        url: '/routines/{id}',
-        templateUrl: '/routine.html',
-        controller: 'RoutineController',
-        controllerAs: 'RoutineCtrl',
+      .state('routine', {
+        url: '/routines/:id',
+        templateUrl: 'routine/_routine.html',
+        controller: 'RoutineController as routineCtrl',
         resolve: {
           routine: function($stateParams, RoutineService) {
             return RoutineService.getRoutine($stateParams.id)
           }
         }
-      })
+      });
 
-      $urlRouterProvider.otherwise('home');
+      // $urlRouterProvider.otherwise('home');
 
     }])

@@ -3,3 +3,7 @@ function RoutineService($http) {
     return $http.get('/routines/' + id + '.json')
   }
 }
+
+angular
+  .module('gritize')
+  .service('RoutineService', RoutineService)
