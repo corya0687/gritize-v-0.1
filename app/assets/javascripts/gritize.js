@@ -19,6 +19,18 @@ angular
         }
       })
 
+      .state('login', {
+        url: '/login',
+        templateUrl: 'auth/_login.html',
+        controller: 'AuthController'
+      })
+      
+      .state('register', {
+        url: '/register',
+        templateUrl: 'auth/_register.html',
+        controller: 'AuthController'
+      })
+
       .state('routine', {
         url: '/routines/:id',
         templateUrl: 'routine/show_routine.html',
