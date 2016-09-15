@@ -3,12 +3,12 @@ function RoutinesService($resource, $http, Auth) {
     return $http.get('/routines.json')
   }
 
-  // var currentUser = Auth._currentUser
-  // var Routine = $resource('users/'+currentUser.id+'/routines/:id.json')
-  //
-  // this.getRoutine = function(id) {
-  //   Routine.get({id: id});
-  // }
+  var currentUser = Auth._currentUser
+  var Routine = $resource('users/'+currentUser.id+'/routines/:id.json')
+
+   this.getRoutine = function(id) {
+     Routine.get({id: id});
+   }
 
 debugger;
 }
