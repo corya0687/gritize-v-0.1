@@ -2,10 +2,13 @@ var NewRoComponent = {
   restrict: 'E',
   controller: function () {
     var ctrl = this
-    debugger;
     this.addNew = function () {
-      this.routines.push({name: this.name})
+      this.routines.push({
+        name: this.name,
+        description: this.description,
+        end_date: this.end_date})
     }
+    debugger;
 
   },
   controllerAs: 'newRoCtrl',
