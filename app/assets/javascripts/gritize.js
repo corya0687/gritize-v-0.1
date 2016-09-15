@@ -19,6 +19,17 @@ angular
         }
       })
 
+      .state('routine', {
+        url: '/routines/:id',
+        templateUrl: 'routine/show_routine.html',
+        controller: 'RoutineController as routineCtrl',
+        resolve: {
+          routine: function($stateParams, RoutinesService) {
+            return RoutinesService.getRoutine($stateParams.id)
+          }
+        }
+      });
+
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',
@@ -41,16 +52,7 @@ angular
         }]
       })
 
-      .state('routine', {
-        url: '/routines/:id',
-        templateUrl: 'routine/show_routine.html',
-        controller: 'RoutineController as routineCtrl',
-        resolve: {
-          routine: function($stateParams, RoutinesService) {
-            return RoutinesService.getRoutine($stateParams.id)
-          }
-        }
-      });
+
 
       // $urlRouterProvider.otherwise('home');
 
