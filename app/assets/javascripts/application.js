@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require angular
 //= require AngularDevise
+//= require angular-resource
 //= require angular-rails-templates
 //= require angular-ui-router
 //= require gritize

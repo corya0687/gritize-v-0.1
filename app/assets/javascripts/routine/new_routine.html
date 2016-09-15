@@ -1,6 +1,9 @@
 <form name="form">
+  Name
   <input type="text" name="name" ng-model="newRoCtrl.name">
+  Description
   <input type="textarea" name="description" ng-model="newRoCtrl.description">
-  <input type="date" name="end_date" ng-model="newRoCtrl.description">
+  End Date
+  <input type="date" name="end_date" ng-model="newRoCtrl.end_date">
 </form>
 <button ng-click="newRoCtrl.addNew()">Add New</button>

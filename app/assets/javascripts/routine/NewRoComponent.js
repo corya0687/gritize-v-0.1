@@ -8,7 +8,6 @@ var NewRoComponent = {
         description: this.description,
         end_date: this.end_date})
     }
-    debugger;
 
   },
   controllerAs: 'newRoCtrl',
