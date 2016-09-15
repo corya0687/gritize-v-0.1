@@ -13,7 +13,7 @@ angular
         templateUrl: 'routine/routine_index.html',
         controller: 'RoIndexController as roiCtrl',
         resolve: {
-          routine: function(RoutinesService) {
+          routines: function(RoutinesService) {
             return RoutinesService.getRoutineIndex()
           }
         }
