@@ -31,7 +31,7 @@ angular
       })
 
       .state('register', {
-        url: '/register',
+        url: '/accounts/register',
         templateUrl: 'auth/_register.html',
         controller: 'AuthController',
         onEnter: ['$state', 'Auth', function($state, Auth) {
