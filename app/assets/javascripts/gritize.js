@@ -28,7 +28,7 @@ angular
             return RoutinesService.getRoutine($stateParams.id)
           }
         }
-      });
+      })
 
       .state('login', {
         url: '/login',
@@ -50,7 +50,7 @@ angular
             $state.go('home');
           })
         }]
-      })
+      });
 
 
 
