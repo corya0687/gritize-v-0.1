@@ -8,6 +8,12 @@ angular
         controller: 'HomeController'
       })
 
+      .state('routines',{
+        url: '/routines.json',
+        templateUrl: 'routine/routine_index',
+        controller: 'RoutinesController as RoutinesCtrl'
+      })
+
       .state('routine', {
         url: '/routines/:id',
         templateUrl: 'routine/show_routine.html',
