@@ -4,7 +4,10 @@ var NewRoComponent = {
 
   },
   controllerAs: 'newRoCtrl',
-  templateUrl: 'routine/new_routine.html'
+  templateUrl: 'routine/new_routine.html',
+  bindings: {
+    routines: '='
+  }
 }
 
 angular
