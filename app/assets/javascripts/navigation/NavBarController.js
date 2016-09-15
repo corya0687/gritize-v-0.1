@@ -1,22 +1,21 @@
-function NavBarController(Auth) {
+function NavBarController($scope, Auth) {
   var ctrl = this
-  ctrl.signedIn = Auth.isAuthenticated;
-  ctrl.logout = Auth.logout;
+  $scope.signedIn = Auth.isAuthenticated;
+  $scope.logout = Auth.logout;
   Auth.currentUser().then(function (user){
-   ctrl.user = user;
+   $scope.user = user;
   });
+  $scope.$on('devise:new-registration', function (e, user){
+     $scope.user = user;
+   });
 
-  ctrl.$on('devise:new-registration', function (e, user){
-   ctrl.user = user;
- });
+   $scope.$on('devise:login', function (e, user){
+     $scope.user = user;
+   });
 
- ctrl.$on('devise:login', function (e, user){
-   ctrl.user = user;
- });
-
- ctrl.$on('devise:logout', function (e, user){
-   ctrl.user = {};
- });
+   $scope.$on('devise:logout', function (e, user){
+     $scope.user = {};
+   });
 
 }
 
