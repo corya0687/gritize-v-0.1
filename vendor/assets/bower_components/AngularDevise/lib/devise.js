@@ -42,11 +42,11 @@
      * The default paths.
      */
     var paths = {
-        login: '/users/sign_in.json',
-        logout: '/users/sign_out.json',
-        register: '/users.json',
-        sendResetPasswordInstructions: '/users/password.json',
-        resetPassword: '/users/password.json'
+        login: '/accounts/sign_in.json',
+        logout: '/accounts/sign_out.json',
+        register: '/accounts.json',
+        sendResetPasswordInstructions: '/accounts/password.json',
+        resetPassword: '/accounts/password.json'
     };
 
     /**
