@@ -11,7 +11,12 @@ angular
       .state('routines',{
         url: '/routines.json',
         templateUrl: 'routine/routine_index',
-        controller: 'RoutinesController as RoutinesCtrl'
+        controller: 'RoIndexController as roiCtrl',
+        resolve: {
+          routine: function(RoutinesService) {
+            return RoutinesService.getRoutineIndex()
+          }
+        }
       })
 
       .state('routine', {
