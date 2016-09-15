@@ -6,6 +6,18 @@ function NavBarController(Auth) {
    ctrl.user = user;
   });
 
+  ctrl.$on('devise:new-registration', function (e, user){
+   ctrl.user = user;
+ });
+
+ ctrl.$on('devise:login', function (e, user){
+   ctrl.user = user;
+ });
+
+ ctrl.$on('devise:logout', function (e, user){
+   ctrl.user = {};
+ });
+
 }
 
 angular
