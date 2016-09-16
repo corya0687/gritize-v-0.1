@@ -1,4 +1,6 @@
-function HomeController() {
+function HomeController(Auth) {
+  this.signedIn = Auth.isAuthenticated;
+  debugger;
 
 }
 
