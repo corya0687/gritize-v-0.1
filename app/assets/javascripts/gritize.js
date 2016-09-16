@@ -9,9 +9,20 @@ angular
       })
 
       .state('profile', {
-        url: 'user/:id'.
+        url: 'user/:user_id',
         templateUrl: 'home/_home.html',
         controller: 'HomeController'
+      })
+
+      .state('user.routine', {
+        url: '/routines/:id',
+        templateUrl: 'routine/show_routine.html',
+        controller: 'RoutineController as routineCtrl',
+        resolve: {
+          routine: function($stateParams, RoutinesService) {
+            return RoutinesService.getRoutine($stateParams.id)
+          }
+        }
       })
 
       .state('routines',{
@@ -25,16 +36,7 @@ angular
         }
       })
 
-      .state('user.routine', {
-        url: '/routines/:id',
-        templateUrl: 'routine/show_routine.html',
-        controller: 'RoutineController as routineCtrl',
-        resolve: {
-          routine: function($stateParams, RoutinesService) {
-            return RoutinesService.getRoutine($stateParams.id)
-          }
-        }
-      })
+
 
       .state('login', {
         url: '/login',
