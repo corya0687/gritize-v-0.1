@@ -4,7 +4,7 @@
     <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
     <li ng-hide="signedIn()"><a href="" ui-sref="register">Register</a></li>
     <li ng-show="signedIn()"><a href="#" ui-sref="profile({user_id:user.id})">{{ user.username }}</a></li>
-    <li ng-show="signedIn()"><a href="" ui-sref="routines">Routines</a></li>
+    <li ng-show="signedIn()"><a href="" ui-sref="profile.routines({user_id:user.id})">Routines</a></li>
     <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
   </ul>
 </div>

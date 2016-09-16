@@ -20,6 +20,18 @@ angular
           }
         }
       })
+      .state('profile.routines',{
+        url: '/routines',
+        templateUrl: 'routine/routine_index.html',
+        controller: 'RoIndexController as roiCtrl',
+        resolve: {
+          routines: function(RoutinesService) {
+            debugger;
+            return RoutinesService.getRoutineIndex()
+          }
+        }
+      })
+
 
       .state('profile.routine', {
         url: '/routines/:id',
@@ -32,16 +44,6 @@ angular
         }
       })
 
-      .state('profile.routines',{
-        url: '/routines',
-        templateUrl: 'routine/routine_index.html',
-        controller: 'RoIndexController as roiCtrl',
-        resolve: {
-          routines: function(RoutinesService) {
-            return RoutinesService.getRoutineIndex()
-          }
-        }
-      })
 
 
 

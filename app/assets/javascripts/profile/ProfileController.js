@@ -1,6 +1,5 @@
 function ProfileController(user) {
  this.user = user
- debugger;
 }
 
 angular
