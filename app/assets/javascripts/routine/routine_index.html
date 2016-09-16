@@ -13,8 +13,9 @@
         </th>
       </tr>
     </thead>
+    Search: <input ng-model="roiCtrl.search" ng-change="roiCtrl.refilter()" />
 
-  <tr ng-repeat="routine in roiCtrl.routines" routine-table-row user="roiCtrl.user" routine="routine"></tr>
+  <tr ng-repeat="routine in roiCtrl.filteredRoutines" routine-table-row user="roiCtrl.user" routine="routine"></tr>
 </table>
 
 <new-ro-component routines=roiCtrl.routines></new-ro-component>
