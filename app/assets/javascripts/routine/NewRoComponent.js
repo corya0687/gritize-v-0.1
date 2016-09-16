@@ -4,7 +4,6 @@ var NewRoComponent = {
     var ctrl = this
 
     this.addNew = function () {
-      debugger;
       var routine = {
             name: this.name,
             description: this.description,

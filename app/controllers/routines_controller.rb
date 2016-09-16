@@ -14,6 +14,11 @@ class RoutinesController < ApplicationController
     end
   end
 
+  def create
+    @routine = current_user.routines.build(routine_params)
+    @routine.save
+  end
+
   private
 
   def set_routine
@@ -21,6 +26,6 @@ class RoutinesController < ApplicationController
   end
 
   def routine_params
-    params.require(:routine).permit(:name, :description, :end_date, :tags => [])
+    params.require(:routine).permit(:name, :user_id, :description, :end_date, :tags => [])
   end
 end
