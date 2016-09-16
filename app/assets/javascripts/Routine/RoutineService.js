@@ -7,7 +7,7 @@ function RoutinesService($resource, $http, Auth) {
   var Routine = $resource('users/'+currentUser.id+'/routines/:id.json')
 
     this.getRoutine = function(id) {
-      Routine.get({id: id});
+       return Routine.get({user_id: currentUser.id, id: id});
     }
 }
 

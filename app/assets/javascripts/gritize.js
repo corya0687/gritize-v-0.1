@@ -43,7 +43,8 @@ angular
         controller: 'RoutineController as routineCtrl',
         resolve: {
           routine: function($stateParams, RoutinesService) {
-            return RoutinesService.getRoutine($stateParams.id)
+            debugger;
+            return RoutinesService.getRoutine($stateParams.id).$promise;
           }
         }
       })

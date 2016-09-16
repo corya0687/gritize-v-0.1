@@ -1,6 +1,7 @@
 function RoutineController(routine) {
+
   var ctrl = this
-  this.routine = routine.data
+  this.routine = routine
 }
 
 angular
