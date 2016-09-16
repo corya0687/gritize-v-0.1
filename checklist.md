@@ -3,7 +3,7 @@
 * [X] Rails/Angular connected
 * [X] Build Routine page
 * [X] Setup Devise
-* [ ]Build Routines Page and nest routines in user routes
+* [X]Build Routines Page and nest routines in user routes
 * [ ] Crud for Routines
 * [X] Setup Bootstrap
 * [X] Build Registration and Sign up page
