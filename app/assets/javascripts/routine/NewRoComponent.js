@@ -3,16 +3,17 @@ var NewRoComponent = {
   controller: function (RoutinesService) {
     var ctrl = this
 
-    this.addNew = function () {
+    ctrl.addNew = function () {
       var routine = {
             name: this.name,
             description: this.description,
             end_date: this.end_date
           }
-            RoutinesService.postRoutine(routine)
+      this.routines.push(routine)
+      RoutinesService.postRoutine(routine)
       }
 
-    //   this.routines.push()
+    //
     // }
 
   },
