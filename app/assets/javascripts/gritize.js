@@ -10,8 +10,8 @@ angular
 
       .state('profile', {
         url: '/users/:user_id',
-        templateUrl: 'home/_home.html',
-        controller: 'HomeController'
+        templateUrl: 'profile/profile.html',
+        controller: 'HomeController as hmCtrl'
       })
 
       .state('profile.routine', {

@@ -1,7 +1,6 @@
 function HomeController(Auth) {
   this.signedIn = Auth.isAuthenticated;
-  debugger;
-
+  
 }
 
 angular
