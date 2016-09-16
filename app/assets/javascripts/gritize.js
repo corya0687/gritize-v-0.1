@@ -9,12 +9,12 @@ angular
       })
 
       .state('profile', {
-        url: 'user/:user_id',
+        url: '/users/:user_id',
         templateUrl: 'home/_home.html',
         controller: 'HomeController'
       })
 
-      .state('user.routine', {
+      .state('profile.routine', {
         url: '/routines/:id',
         templateUrl: 'routine/show_routine.html',
         controller: 'RoutineController as routineCtrl',
@@ -25,7 +25,7 @@ angular
         }
       })
 
-      .state('routines',{
+      .state('profile.routines',{
         url: '/routines',
         templateUrl: 'routine/routine_index.html',
         controller: 'RoIndexController as roiCtrl',
