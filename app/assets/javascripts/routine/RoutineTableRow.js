@@ -3,7 +3,6 @@ function RoutineTableRow() {
     restrict: 'EA',
     controller: function () {
       var ctrl = this
-      debugger;
     },
     controllerAs: 'routineCtrl',
     templateUrl: 'routine/_routine.html',
