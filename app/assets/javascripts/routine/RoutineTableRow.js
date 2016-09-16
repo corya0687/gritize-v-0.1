@@ -1,17 +1,23 @@
-var RoutineTableRow = {
-  restrict: 'E',
-  controller: function () {
-    var ctrl = this
-  },
-  controllerAs: 'routineCtrl',
-  templateUrl: 'routine/_routine.html',
-  bindings: {
-    routine: '=',
-    user: '='
+function RoutineTableRow() {
+  return {
+    restrict: 'EA',
+    controller: function () {
+      var ctrl = this
+      debugger;
+    },
+    controllerAs: 'routineCtrl',
+    templateUrl: 'routine/_routine.html',
+    scope: {
+      routine: '=',
+      user: '=',
+    },
+    bindToController: true
   }
-
 }
+
+
+
 
 angular
   .module('gritize')
-  .component('routineTableRow', RoutineTableRow)
+  .directive('routineTableRow', RoutineTableRow)

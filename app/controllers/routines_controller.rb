@@ -2,9 +2,8 @@ class RoutinesController < ApplicationController
   before_action :set_routine, only: [:show]
 
   def index
-    @routines = Routine.all
     respond_to do |format|
-      format.json {render json: @routines}
+      format.json {render json: current_user.routines}
     end
   end
 
