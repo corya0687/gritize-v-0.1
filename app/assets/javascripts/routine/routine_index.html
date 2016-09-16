@@ -1,5 +1,5 @@
 <h1>Your Routines</h1>
 <div ng-repeat="routine in roiCtrl.routines">
-  <routine-table-row routine="routine"></routine-table-row>
+  <routine-table-row user="roiCtrl.user" routine="routine"></routine-table-row>
 </div>
 <new-ro-component routines=roiCtrl.routines></new-ro-component>

@@ -5,10 +5,10 @@ function RoutinesService($resource, $http, Auth) {
 
   var currentUser = Auth._currentUser
   var Routine = $resource('users/'+currentUser.id+'/routines/:id.json')
-debugger;
-  //  this.getRoutine = function(id) {
-  //    Routine.get({id: id});
-  //  }
+
+    this.getRoutine = function(id) {
+      Routine.get({id: id});
+    }
 }
 
 angular

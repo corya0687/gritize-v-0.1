@@ -26,8 +26,12 @@ angular
         controller: 'RoIndexController as roiCtrl',
         resolve: {
           routines: function(RoutinesService) {
-            debugger;
             return RoutinesService.getRoutineIndex()
+          },
+          user: function (Auth) {
+            return Auth.currentUser().then(function (user){
+              return user;
+            })
           }
         }
       })
