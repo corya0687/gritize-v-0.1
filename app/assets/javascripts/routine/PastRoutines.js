@@ -1,7 +1,8 @@
 function PastRoutines() {
-  var utc = new Date().toJSON().slice(0,10);
 
-  return function (items, utc) {
+  return function (items) {
+    var utc = new Date().toJSON().slice(0,10);
+
     return items.filter(function (item) {
       return item.end_date < utc
     })
@@ -12,4 +13,4 @@ function PastRoutines() {
 
 angular
   .module('gritize')
-  .filter('PastRoutines', PastRoutines)
+  .filter('pastRoutines', PastRoutines)
