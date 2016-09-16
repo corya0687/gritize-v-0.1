@@ -8,6 +8,12 @@ angular
         controller: 'HomeController'
       })
 
+      .state('profile', {
+        url: 'user/:id'.
+        templateUrl: 'home/_home.html',
+        controller: 'HomeController'
+      })
+
       .state('routines',{
         url: '/routines',
         templateUrl: 'routine/routine_index.html',
@@ -19,7 +25,7 @@ angular
         }
       })
 
-      .state('routine', {
+      .state('user.routine', {
         url: '/routines/:id',
         templateUrl: 'routine/show_routine.html',
         controller: 'RoutineController as routineCtrl',
