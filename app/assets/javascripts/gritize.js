@@ -11,7 +11,14 @@ angular
       .state('profile', {
         url: '/users/:user_id',
         templateUrl: 'profile/profile.html',
-        controller: 'HomeController as hmCtrl'
+        controller: 'ProfileController as proCtrl',
+        resolve: {
+          user: function (Auth) {
+            return Auth.currentUser().then(function (user){
+              return user;
+            })
+          }
+        }
       })
 
       .state('profile.routine', {

@@ -1,6 +1,7 @@
 function UserService($resource, $http, Auth) {
-  
-  var User = $resource('/users/'+currentUser.id'.json');
+
+  var User = $resource('/users/'+currentUser.id+'.json');
+
 }
 
 

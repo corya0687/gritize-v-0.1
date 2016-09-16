@@ -1,14 +1,13 @@
 var ProfileComponent = {
   restrict: 'E',
   templateUrl: 'profile/_stats.html',
-  controller: function (Auth) {
-    var ctrl = this
-
-    Auth.currentUser().then(function (user){
-      ctrl.user = user;
-    });
+  controller: function () {
+    debugger;
   },
-  controllerAs: 'proCtrl'
+  controllerAs: 'proCtrl',
+  bindings: {
+    user: '='
+  }
 }
 
 angular

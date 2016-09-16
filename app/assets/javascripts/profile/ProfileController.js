@@ -1,7 +1,8 @@
-function ProfileContrller(Auth) {
-  
+function ProfileController(user) {
+ this.user = user
+ debugger;
 }
 
 angular
   .module('gritize')
-  .controller('ProfileContrller', ProfileController)
+  .controller('ProfileController', ProfileController)
