@@ -4,10 +4,14 @@ function RoutinesService($resource, $http, Auth) {
   }
 
   var currentUser = Auth._currentUser
-  var Routine = $resource('users/'+currentUser.id+'/routines/:id.json')
+  var Routine = $resource('users/'+currentUser.id+'/routines/:id.json', {id: '@id'})
 
     this.getRoutine = function(id) {
        return Routine.get({user_id: currentUser.id, id: id});
+    }
+
+    this.postRoutine = function(routine) {
+      return Routine.save(routine)
     }
 }
 
