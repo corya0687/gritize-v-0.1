@@ -14,11 +14,10 @@ function RoIndexController($scope, routines, $filter) {
   };
 
   this.pastfilter = function () {
-    ctrl.filterRoutines = $filter('pastRoutines')(ctrl.routines)
+    ctrl.filteredRoutines = $filter('pastRoutines')(ctrl.routines)
   }
 
   this.refilter();
-  this.pastfilter();
 
 }
 
