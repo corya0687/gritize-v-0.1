@@ -15,6 +15,7 @@
 //= require angular
 //= require AngularDevise
 //= require angular-resource
+//= require angular-messages
 //= require angular-rails-templates
 //= require angular-ui-router
 //= require gritize
