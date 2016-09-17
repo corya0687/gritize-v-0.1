@@ -1,6 +1,9 @@
 <h1>Your Routines</h1>
-Search: <input ng-model="roiCtrl.search" ng-change="roiCtrl.refilter()" />
-<a href="" ng-click="roiCtrl.pastfilter()">Past Routines</a>
+<div class="pull-right">
+  Search: <input ng-model="roiCtrl.search" ng-change="roiCtrl.refilter()" />
+  <a href="" ng-click="roiCtrl.pastfilter()">Past Routines</a>
+</div>
+
 <table class="table table-striped">
     <thead>
       <tr>
@@ -20,4 +23,4 @@ Search: <input ng-model="roiCtrl.search" ng-change="roiCtrl.refilter()" />
   <tr ng-repeat="routine in roiCtrl.filteredRoutines" routine-table-row user="roiCtrl.user" routine="routine"></tr>
 </table>
 
-<new-ro-component routines=roiCtrl.routines></new-ro-component>
+<new-ro-component routines=roiCtrl.filteredRoutines></new-ro-component>
