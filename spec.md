@@ -9,7 +9,7 @@ Specs:
 - [X] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 - [X] Data should be validated in Angular before submission
 - [X] Must talk to the Rails backend using $http and Services
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [X] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm
 - [ ] You have a large number of small Git commits
