@@ -1,8 +1,29 @@
 <form ng-submit="newRoCtrl.addNew()"  name="new_ro">
   Name
-  <input type="text" name="name" ng-model="newRoCtrl.name">
+  <input
+    type="text"
+    name="name"
+    ng-model="newRoCtrl.name"
+    required="required"
+    minlength="4"/>
+
+    <div ng-messages="new_ro.name.$error">
+      <div ng-message="required">Name is Required!</div>
+      <div ng-message="minlength">Must be more than 4 characters!</div>
+    </div>
   Description
-  <input type="textarea" name="description" ng-model="newRoCtrl.description">
+  <input
+    type="textarea"
+    name="description"
+    ng-model="newRoCtrl.description"
+    required="required"
+    minlength="10"/>
+
+    <div ng-messages="new_ro.description.$error">
+      <div ng-message="required">description is Required!</div>
+      <div ng-message="minlength">Must be more than 10 characters!</div>
+    </div>
+    
   End Date
   <input type="date" name="end_date" ng-model="newRoCtrl.end_date">
   <button type="submit">Add New</button>

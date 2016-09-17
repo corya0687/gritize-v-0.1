@@ -1,5 +1,5 @@
 angular
-  .module('gritize',['ui.router', 'templates', 'Devise', 'ngResource'])
+  .module('gritize',['ui.router', 'templates', 'Devise', 'ngResource', 'ngMessages'])
   .config(['$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

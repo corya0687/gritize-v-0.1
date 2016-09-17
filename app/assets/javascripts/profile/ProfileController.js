@@ -5,7 +5,6 @@ function ProfileController(user, $scope ) {
   $scope.$watch(function () {
     return ctrl.user
   }, function (newValue, oldValue) {
-    alert('newValue')
   }, true)
 }
 
