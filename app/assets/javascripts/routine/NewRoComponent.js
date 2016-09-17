@@ -1,6 +1,6 @@
 var NewRoComponent = {
   restrict: 'E',
-  controller: function (RoutinesService) {
+  controller: function (RoutinesService, $scope) {
     var ctrl = this
 
     ctrl.addNew = function () {
@@ -11,10 +11,8 @@ var NewRoComponent = {
           }
       this.routines.push(routine)
       RoutinesService.postRoutine(routine)
-      }
 
-    //
-    // }
+    }
 
   },
   controllerAs: 'newRoCtrl',

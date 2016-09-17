@@ -3,3 +3,7 @@
   border: none;
   outline: none;
 }
+
+.inline-header {
+  display: inline;
+}
