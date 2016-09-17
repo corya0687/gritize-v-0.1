@@ -20,6 +20,7 @@ angular
           }
         }
       })
+
       .state('profile.routines',{
         url: '/routines',
         templateUrl: 'routine/routine_index.html',
@@ -35,6 +36,7 @@ angular
           }
         }
       })
+
       .state('profile.routine', {
         url: '/routines/:id',
         templateUrl: 'routine/show_routine.html',
