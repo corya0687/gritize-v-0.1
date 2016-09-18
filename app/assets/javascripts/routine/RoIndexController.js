@@ -1,4 +1,6 @@
-function RoIndexController($scope, routines, $filter) {
+function RoIndexController($scope, routines, $filter, $state) {
+debugger;
+
   var ctrl = this
   ctrl.routines= routines.data
   $scope.$watchCollection(function () {
@@ -7,6 +9,7 @@ function RoIndexController($scope, routines, $filter) {
     console.log(newValue + 'added')
   });
 
+debugger;
   ctrl.search = '';
 
   this.refilter = function () {

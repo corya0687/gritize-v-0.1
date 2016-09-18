@@ -18,24 +18,28 @@ angular
               return user;
             })
           }
-        }
+        },
       })
 
       .state('profile.routines',{
-        url: '/routines',
-        templateUrl: 'routine/routine_index.html',
-        controller: 'RoIndexController as roiCtrl',
-        resolve: {
-          routines: function(RoutinesService) {
-            return RoutinesService.getRoutineIndex()
-          },
-          user: function (Auth) {
-            return Auth.currentUser().then(function (user){
-              return user;
-            })
+        url: '/routines.json',
+        views: {
+          "@profile": {
+              templateUrl: 'routine/routine_index.html',
+              controller: 'RoIndexController as roiCtrl',
+              resolve: {
+                routines: function(RoutinesService) {
+                  return RoutinesService.getRoutineIndex()
+                },
+                user: function (Auth) {
+                  return Auth.currentUser().then(function (user){
+                    return user;
+                  })
+                }
+              }
+            }
           }
-        }
-      })
+        })
 
       .state('profile.routine', {
         url: '/routines/:id',
