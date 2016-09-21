@@ -1,26 +1,51 @@
 
 <h1>Your Profile </h1>
 <h5>You Currently Have {{proCtrl.user.routines.length}} active</h5>
+<div class="row">
+  <div class="col-md-3">
+    <h4>Recently Created Routines</h4>
 
-<div class="col-md-3">
-  <h4>Recently Created Routines</h4>
+    <table class="table table-striped">
+        <thead>
 
-  <table class="table table-striped">
-      <thead>
+          <tr>
+            <th>
+             Name
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              End Date
+            </th>
+          </tr>
+        </thead>
 
-        <tr>
-          <th>
-           Name
-          </th>
-          <th>
-            Description
-          </th>
-          <th>
-            End Date
-          </th>
-        </tr>
-      </thead>
+      <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+    </table>
+  </div>
 
-    <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
-  </table>
+  <div class="col-md-3 col-md-offset-3">
+    <h4>Recently Completed Routines</h4>
+
+    <table class="table table-striped">
+        <thead>
+
+          <tr>
+            <th>
+             Name
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              End Date
+            </th>
+          </tr>
+        </thead>
+
+      <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+    </table>
+  </div>
+
 </div>

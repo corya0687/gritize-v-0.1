@@ -43,13 +43,18 @@ angular
 
       .state('profile.routine', {
         url: '/routines/:id',
-        templateUrl: 'routine/show_routine.html',
-        controller: 'RoutineController as routineCtrl',
-        resolve: {
-          routine: function($stateParams, RoutinesService) {
-            return RoutinesService.getRoutine($stateParams.id).$promise;
+        views:{
+          "@": {
+            templateUrl: 'routine/show_routine.html',
+            controller: 'RoutineController as routineCtrl',
+            resolve: {
+              routine: function($stateParams, RoutinesService) {
+                return RoutinesService.getRoutine($stateParams.id).$promise;
+              }
+            }
           }
         }
+
       })
 
       .state('login', {
