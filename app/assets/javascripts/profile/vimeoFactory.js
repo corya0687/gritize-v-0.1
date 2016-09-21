@@ -12,7 +12,7 @@
       method: 'GET',
       url: 'https://api.vimeo.com/categories/motivation/videos',
       headers: {
-        'Authorization': '89a05933490a8c35e7d00b19a054dd20'
+        'Authorization': ''
       }
     }
 
