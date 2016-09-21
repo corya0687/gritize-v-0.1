@@ -76,6 +76,6 @@ angular
 
 
 
-      // $urlRouterProvider.otherwise('home');
+      $urlRouterProvider.otherwise('home');
 
     }])
