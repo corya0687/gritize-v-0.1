@@ -5,8 +5,10 @@ var ProfileComponent = {
     var ctrl = this
 
     ctrl.firstFiveRoutines = firstFiveRoutines();
+
     function firstFiveRoutines() {
-      return ctrl.user.routines.slice(0,5)
+      roArray= ctrl.user.routines
+      return ctrl.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
     debugger;
