@@ -8,14 +8,15 @@ var ProfileComponent = {
     ctrl.completedRoutines = completedRoutines();
 
     function firstFiveRoutines() {
-      roArray= ctrl.user.routines
+      let roArray= ctrl.user.routines
       return ctrl.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
     debugger;
 
     function completedRoutines() {
-      // return $filter('pastRoutines')(ctrl.routines)
+      let roArray = ctrl.user.routines
+      return $filter('pastRoutines')(ctrl.user.routines)
     }
 
   },

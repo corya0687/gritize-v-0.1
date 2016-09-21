@@ -39,12 +39,12 @@
               Description
             </th>
             <th>
-              End Date
+              Completed
             </th>
           </tr>
         </thead>
 
-      <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+      <tr ng-repeat="routine in proCtrl.completedRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
     </table>
   </div>
 
