@@ -1,10 +1,10 @@
-<div class="collapse navbar-collapse " ng-controller="NavBarController">
-  <ul class="nav navbar-nav">
-    <li><a href="#/home">Home</a></li>
-    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-    <li ng-hide="signedIn()"><a href="" ui-sref="register">Register</a></li>
-    <li ng-show="signedIn()"><a href="#" ui-sref="profile({user_id:user.id})">{{ user.username }}</a></li>
-    <li ng-show="signedIn()"><a href="" ui-sref="profile.routines({user_id:user.id})">Routines</a></li>
-    <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
+<div class="navbar navbar-full navbar-dark bg-primary"  ng-controller="NavBarController">
+  <ul class="nav navbar-nav" style="color: white;">
+    <li><a a class="c-links"  href="#/home">Home</a></li>
+    <li ng-hide="signedIn()"><a class="c-links"  href="#/login">Log In</a></li>
+    <li ng-hide="signedIn()"><a class="c-links" href="" ui-sref="register">Register</a></li>
+    <li ng-show="signedIn()"><a class="c-links" href="#" ui-sref="profile({user_id:user.id})">{{ user.username }}</a></li>
+    <li ng-show="signedIn()"><a class="c-links" href="" ui-sref="profile.routines({user_id:user.id})">Routines</a></li>
+    <li ng-show="signedIn()"><a class="c-links" ng-click="logout()">Log Out</a></li>
   </ul>
 </div>
