@@ -1,5 +1,4 @@
 function RoIndexController($scope, routines, $filter, $state) {
-debugger;
 
   var ctrl = this
   ctrl.routines= routines.data
@@ -9,7 +8,6 @@ debugger;
     console.log(newValue + 'added')
   });
 
-debugger;
   ctrl.search = '';
 
   this.refilter = function () {

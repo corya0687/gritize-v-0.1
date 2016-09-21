@@ -11,7 +11,6 @@ var ProfileComponent = {
       return ctrl.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
-    debugger;
   },
   controllerAs: 'proCtrl',
   bindings: {

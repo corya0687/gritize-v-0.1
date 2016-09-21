@@ -1,11 +1,8 @@
-function ProfileController(user, $scope ) {
+function ProfileController(user, $scope, $location ) {
   var ctrl = this;
-
-  ctrl.user = user
-
   
+  ctrl.user = user
 }
-
 angular
   .module('gritize')
   .controller('ProfileController', ProfileController)

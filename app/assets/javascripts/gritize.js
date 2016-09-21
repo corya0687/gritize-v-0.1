@@ -18,13 +18,13 @@ angular
               return user;
             })
           }
-        },
+        }
       })
 
       .state('profile.routines',{
         url: '/routines.json',
         views: {
-          "@profile": {
+          "@": {
               templateUrl: 'routine/routine_index.html',
               controller: 'RoIndexController as roiCtrl',
               resolve: {
