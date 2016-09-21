@@ -1,20 +1,33 @@
 var ProfileComponent = {
   restrict: 'E',
   templateUrl: 'profile/_stats.html',
-  controller: function ($scope, $filter) {
-    var ctrl = this
+  controller: function ($scope, $filter, VimeoFactory) {
+    var vm = this
+    vm.firstFiveRoutines = firstFiveRoutines();
+    vm.completedRoutines = completedRoutines();
+    vm.dailyVid;
+    vm.grabVid = grabVids;
 
-    ctrl.firstFiveRoutines = firstFiveRoutines();
-    ctrl.completedRoutines = completedRoutines();
+    activate();
+
+    function activate() {
+      return grabVids()
+    }
+
+    function grabVids() {
+      debugger;
+      return VimeoFactory.getVids()
+          .then(setDailyVid)
+    }
 
     function firstFiveRoutines() {
-      let roArray= ctrl.user.routines
-      return ctrl.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
+      let roArray= vm.user.routines
+      return vm.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
     function completedRoutines() {
-      let roArray = ctrl.user.routines
-      return $filter('pastRoutines')(ctrl.user.routines)
+      let roArray = vm.user.routines
+      return $filter('pastRoutines')(vm.user.routines)
     }
 
   },
