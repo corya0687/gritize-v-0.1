@@ -12,8 +12,6 @@ var ProfileComponent = {
       return ctrl.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
-    debugger;
-
     function completedRoutines() {
       let roArray = ctrl.user.routines
       return $filter('pastRoutines')(ctrl.user.routines)
