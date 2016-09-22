@@ -5,18 +5,17 @@ var ProfileComponent = {
     var vm = this
     vm.firstFiveRoutines = firstFiveRoutines();
     vm.completedRoutines = completedRoutines();
-    vm.vids;
-    vm.grabVid = grabVids;
-
+    vm.vid;
     activate();
 
     function activate() {
-      return grabVids()
+      return grabVid()
     }
 
-    function grabVids() {
-      return VimeoFactory.getVids()
-          .then(setVids)
+    function grabVid() {
+      debugger;
+      return VimeoFactory.getVid()
+          .then(setVid)
     }
 
     function firstFiveRoutines() {
@@ -29,8 +28,9 @@ var ProfileComponent = {
       return $filter('pastRoutines')(vm.user.routines)
     }
 
-    function setVids(response) {
-      vm.vids = response.data;
+    function setVid(response) {
+      debugger;
+      vm.vid = response;
     }
 
   },

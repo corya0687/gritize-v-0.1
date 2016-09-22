@@ -6,7 +6,7 @@
     templateUrl: 'profile/_profile_video.html',
     controller: function ($sce) {
       var vm = this;
-
+      debugger;
       vm.title = vm.video.name
       vm.player = "https://player.vimeo.com/video/";
       vm.video.id = vm.video.uri.match(/\d+/).join("");
