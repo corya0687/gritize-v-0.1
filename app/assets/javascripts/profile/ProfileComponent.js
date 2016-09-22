@@ -30,7 +30,6 @@ var ProfileComponent = {
     }
 
     function setVids(response) {
-      debugger;
       vm.vids = response.data;
     }
 
