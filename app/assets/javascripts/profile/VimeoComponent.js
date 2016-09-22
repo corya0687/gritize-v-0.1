@@ -3,12 +3,14 @@
 
   var VimeoComponent = {
     restrict: 'E',
-    templateUrl: '_profile_video.html',
-    controller: function () {
+    templateUrl: 'profile/_profile_video.html',
+    controller: function ($sce) {
       var vm = this;
 
-      vm.title = video.name
-      debugger;
+      vm.title = vm.video.name
+      vm.player = "https://player.vimeo.com/video/";
+      vm.video.id = vm.video.uri.match(/\d+/).join("");
+      vm.src = $sce.trustAsResourceUrl(vm.player + vm.video.id);
     },
     controllerAs: 'vimeoCtrl',
     bindings: {
