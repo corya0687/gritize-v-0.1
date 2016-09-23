@@ -7,7 +7,6 @@
       getVid: getVid
     }
 
-
     function getVid() {
       let page = randomPage();
       var req = {
@@ -25,13 +24,11 @@
 
     function handleResponse(response) {
       console.log(response)
-      debugger;
       return randomVid(response.data)
     }
 
     function randomVid(vids) {
       let randomNum = Math.floor((Math.random()*25) + 1)
-      debugger;
       return vids.data[randomNum]
     }
 

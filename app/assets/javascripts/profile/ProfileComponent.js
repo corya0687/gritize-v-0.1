@@ -6,6 +6,7 @@ var ProfileComponent = {
     vm.firstFiveRoutines = firstFiveRoutines();
     vm.completedRoutines = completedRoutines();
     vm.vid;
+
     activate();
 
     function activate() {
@@ -13,7 +14,6 @@ var ProfileComponent = {
     }
 
     function grabVid() {
-      debugger;
       return VimeoFactory.getVid()
           .then(setVid)
     }
@@ -25,11 +25,11 @@ var ProfileComponent = {
 
     function completedRoutines() {
       let roArray = vm.user.routines
-      return $filter('pastRoutines')(vm.user.routines)
+      roArray= $filter('pastRoutines')(roArray)
+      return roArray.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
     function setVid(response) {
-      debugger;
       vm.vid = response;
     }
 
