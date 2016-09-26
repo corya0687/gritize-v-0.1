@@ -1,5 +1,5 @@
 <td>
-  {{routineCtrl.routine.name}}
+  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name "{ updateOn: 'blur', debounce: {'default': 1000, 'blur': 2000} }" >
 </td>
 <td>
   {{routineCtrl.routine.description}}

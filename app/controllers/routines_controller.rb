@@ -18,6 +18,11 @@ class RoutinesController < ApplicationController
     @routine.save
   end
 
+  def update
+    @routine.update(routine_params)
+    @routine.save
+  end
+
   private
 
   def set_routine

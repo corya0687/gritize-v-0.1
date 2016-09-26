@@ -10,6 +10,9 @@ function RoutinesService($resource, $http, Auth) {
        return Routine.get({user_id: currentUser.id, id: id});
     }
 
+    this.updateRoutine = function (routine) {
+      return Routine.save(routine)
+    }
     this.postRoutine = function(routine) {
       return Routine.save(routine)
     }

@@ -13,6 +13,8 @@ To get this running locally on your computer:
 - $cd into Gritize directory
 - Enter `$bundle`
 - Enter `$rake db:migrate`
+- Run 'Bower install angular'
+- Run 'Bower install angular-ui-router'
 - Enter `$rails s` to run
 
 
