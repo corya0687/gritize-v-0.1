@@ -15,9 +15,14 @@
     required="required"
     minlength="10"/>
 
+    <label for="start_date">Start Date</label>
+    <input type="date" name="start_date" ng-model="newRoCtrl.start_date">
+
   <label for="end_date">End Date</label>
   <input type="date" name="end_date" ng-model="newRoCtrl.end_date">
   <button type="submit">Add New</button>
+
+
 </form>
 
 <div class="col-md-2" ng-messages="new_ro.name.$error" ng-if="new_ro.name.$dirty">

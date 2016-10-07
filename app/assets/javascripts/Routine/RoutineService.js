@@ -13,6 +13,7 @@ function RoutinesService($resource, $http, Auth) {
     this.updateRoutine = function (routine) {
       return Routine.save(routine)
     }
+
     this.postRoutine = function(routine) {
       return Routine.save(routine)
     }

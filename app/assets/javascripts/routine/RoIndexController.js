@@ -18,6 +18,10 @@ function RoIndexController($scope, routines, $filter, $state) {
     ctrl.filteredRoutines = $filter('pastRoutines')(ctrl.routines)
   }
 
+  this.started = function () {
+    ctrl.filteredRoutines = $filter('started')(ctrl.routines)
+  }
+
   this.refilter();
 
 }

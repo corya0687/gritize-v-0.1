@@ -7,6 +7,7 @@ var NewRoComponent = {
       var routine = {
             name: this.name,
             description: this.description,
+            start_date: this.start_date,
             end_date: this.end_date
           }
       this.routines.push(routine)

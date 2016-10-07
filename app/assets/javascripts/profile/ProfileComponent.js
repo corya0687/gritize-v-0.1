@@ -7,6 +7,8 @@ var ProfileComponent = {
     vm.completedRoutines = completedRoutines();
     vm.vid;
 
+    debugger;
+
     activate();
 
     function activate() {
