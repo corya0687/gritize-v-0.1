@@ -11,11 +11,15 @@ function RoutinesService($resource, $http, Auth) {
     }
 
     this.updateRoutine = function (routine) {
-      return Routine.save(routine)
+      return Routine.save(routine);
+    }
+
+    this.getSubRoutines = function (routine) {
+      return Routine.subroutines;
     }
 
     this.postRoutine = function(routine) {
-      return Routine.save(routine)
+      return Routine.save(routine);
     }
 }
 
