@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, :path => 'accounts'
   resources :tags
   resources :users do
-    resources :routines
+    resources :routines do
+      resources :subroutines
+    end
   end
 
   resources :routines, only: [:index]
