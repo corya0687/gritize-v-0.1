@@ -5,13 +5,14 @@
   function SubRoutine() {
     return {
       restrict: 'EA',
-      controller: function (RoutinesService) {
+      controller: function (SubRService) {
         var vm = this;
-        debugger;
+      
       },
-      templateUrl: 'routine/subroutines/_subRRow.html',
+      templateUrl: 'routine/subroutines/views/_subRRow.html',
       controllerAs: 'subRCtrl',
       scope: {
+        routine: '='
         subroutine: '='
       },
       bindToController: true

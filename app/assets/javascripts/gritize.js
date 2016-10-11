@@ -25,7 +25,7 @@ angular
         url: '/routines.json',
         views: {
           "@": {
-              templateUrl: 'routine/routine_index.html',
+              templateUrl: 'routine/views/routine_index.html',
               controller: 'RoIndexController as roiCtrl',
               resolve: {
                 routines: function(RoutinesService) {
@@ -45,7 +45,7 @@ angular
         url: '/routines/:id',
         views:{
           "@": {
-            templateUrl: 'routine/show_routine.html',
+            templateUrl: 'routine/views/show_routine.html',
             controller: 'RoutineController as routineCtrl',
             resolve: {
               routine: function($stateParams, RoutinesService) {

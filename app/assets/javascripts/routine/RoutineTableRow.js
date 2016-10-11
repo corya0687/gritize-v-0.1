@@ -6,7 +6,7 @@
         var ctrl = this
       },
       controllerAs: 'routineCtrl',
-      templateUrl: 'routine/_routine.html',
+      templateUrl: 'routine/views/_routine.html',
       scope: {
         routine: '=',
         user: '=',
