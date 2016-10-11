@@ -8,13 +8,11 @@
       controller: function (RoutinesService) {
         var vm = this;
         debugger;
-        vm.subroutines = RoutineService.getSubRoutines(this.routine);
       },
       templateUrl: 'routine/subroutines/_subRRow.html',
       controllerAs: 'subRCtrl',
       scope: {
-        routine: '=',
-        user: '=',
+        subroutine: '='
       },
       bindToController: true
     }
@@ -22,5 +20,5 @@
 
   angular
     .module('gritize')
-    .directive('subroutine', SubRoutine)
+    .directive('subRoutine', SubRoutine)
 }());

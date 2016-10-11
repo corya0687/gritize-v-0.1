@@ -1,3 +1,28 @@
-<h1>{{routineCtrl.routine.name}}</h1>
-<routine-table-row routine=routineCtrl.routine></routine-table-row>
-<subRoutine></subRoutine>
+
+<table class="table table-striped">
+  <thead class="text-center">
+    {{routineCtrl.routine.name}}
+  </thead>
+
+  <tr>
+    <td>
+      {{routineCtrl.routine.description}}
+    </td>
+
+    <td>
+      {{routineCtrl.routine.end_date}}
+    </td>
+  </tr>
+</table>
+<table class="table table-striped">
+  <thead>
+    SubRoutines
+  </thead>
+  <th>
+    Name
+  </th>
+  <th>
+    Description
+  </th>
+  <tr ng-repeat= "subR in routineCtrl.routine.subroutines" sub-routine subroutine=subR></tr>
+</table>
