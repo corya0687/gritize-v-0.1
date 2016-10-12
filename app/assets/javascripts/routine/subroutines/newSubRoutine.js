@@ -2,20 +2,20 @@
   'use strict';
 
   var NewSubRoutine = {
-
+    restrict: 'E',
     controller: function (SubRService) {
       var vm = this;
-      var subR = {
-        name: vm.name,
-        description: vm.description,
-        end_date: vm.end_date,
-        routine_id: vm.routine.id
+      var newSubR = {
+        name: this.name,
+        description: this.description,
+        end_date: this.end_date,
+        routine_id: this.routine.id
       }
 
-      vm.newSubRoutine = newSubRoutine;
+      this.newSubRoutine = newSubRoutine;
 
       function newSubRoutine() {
-        SubRService.save({id: vm.routine.id}, subR);
+        SubRService.save({id: this.routine.id, subR: subR});
       }
     },
     controllerAs: 'newSubRCtrl',

@@ -4,8 +4,10 @@ class SubroutinesController < ApplicationController
   end
 
   def create
-    @sub_routine = Subroutine.new(subroutine_params)
-    @sub_routine.save
+    binding.pry
+    @routine = Routine.find(params[:routine_id])
+    @routine.subroutines.build(subroutine_params)
+    @routine.save
   end
 
   def update
@@ -19,6 +21,6 @@ class SubroutinesController < ApplicationController
     end
 
     def subroutine_parmas
-      params.require(:subroutine).permit(:name, :description, :end_date)
+      params.require(:subroutine).permit(:name, :routine_id, :description, :end_date, :user_id)
     end
 end

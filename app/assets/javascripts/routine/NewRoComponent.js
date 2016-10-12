@@ -4,6 +4,7 @@
     restrict: 'E',
     controller: function (RoutinesService, $scope) {
       var ctrl = this
+      debugger;
 
       ctrl.addNew = function () {
         var routine = {
