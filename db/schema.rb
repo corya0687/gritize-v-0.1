@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20161013005138) do
     t.boolean  "complete"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.time     "integer"
+    t.datetime "end_date"
   end
 
   create_table "tags", force: :cascade do |t|
