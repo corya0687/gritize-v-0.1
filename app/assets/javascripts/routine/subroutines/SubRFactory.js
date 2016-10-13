@@ -1,23 +1,15 @@
 (function() {
-  function SubRService($http, $resource, Auth) {
+  function SubRService($resource, Auth, $stateParams) {
     var currentUser = Auth._currentUser
 
     return {
-      SubRoutine: SubRoutine,
-      createSubR: createSubR
+      postSubR: postSubR
     }
 
-    SubRoutine = $resource('users/'+currentUser.id+'/routines/:id/subroutines', {id:'@id'}, {
-      subroutines: {
-        params: {subRoutine: '@subroutine'}
-      }
-    })
-
-    function createSubR() {
-
+    function postSubR(SubR) {
+      var SubRoutine = $resource('users/'+currentUser.id+'/routines/:routine_id/subroutines', {routine_id: $stateParams.id, id:'@id'})
+      return SubRoutine.save(SubR);
     }
-
-
   }
 
   angular

@@ -5,18 +5,20 @@
     restrict: 'E',
     controller: function (SubRService) {
       var vm = this;
-      var newSubR = {
-        name: this.name,
-        description: this.description,
-        end_date: this.end_date,
-        routine_id: this.routine.id
-      }
 
       this.newSubRoutine = newSubRoutine;
 
       function newSubRoutine() {
-        SubRService.save({id: this.routine.id, subR: subR});
+        var newSubR = {
+          name: this.name,
+          description: this.description,
+          end_date: this.end_date
+        }
+
+        this.routine.subroutines.push(newSubR);
+        SubRService.postSubR(newSubR);
       }
+
     },
     controllerAs: 'newSubRCtrl',
     templateUrl: 'routine/subroutines/views/_newSubR.html',
@@ -25,8 +27,6 @@
     }
 
   }
-
-
 
   angular
     .module('gritize')

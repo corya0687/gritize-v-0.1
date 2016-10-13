@@ -14,13 +14,17 @@ class SubroutinesController < ApplicationController
 
   end
 
+  def show
+
+  end
+
   private
 
     def set_routine
       @sub_routine = Subroutine.find(params[:id])
     end
 
-    def subroutine_parmas
-      params.require(:subroutine).permit(:name, :routine_id, :description, :end_date, :user_id)
+    def subroutine_params
+      params.require(:subroutine).permit(:name, :description, :end_date)
     end
 end
