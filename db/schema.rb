@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013005138) do
+ActiveRecord::Schema.define(version: 20161014232926) do
 
   create_table "routine_tags", force: :cascade do |t|
     t.integer  "routine_id"
@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 20161013005138) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.datetime "end_date"
+    t.date     "end_date"
+    t.date     "start_date"
   end
 
   create_table "subroutines", force: :cascade do |t|

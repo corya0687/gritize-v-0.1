@@ -1,17 +1,19 @@
 <td>
   <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name >
 </td>
-<td>
-<input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description ></td>
-<td>
-  {{routineCtrl.routine.start_date}}
 
-</td>
 <td>
-  {{routineCtrl.routine.date_format}}
-
+  <input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description>
 </td>
+
+<td>
+  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date>
+</td>
+
+<td>
+  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date>
+</td>
+
 <td>
   <a href="" ui-sref="profile.routine({id: routineCtrl.routine.id})">View Routine</a>
-
 </td>

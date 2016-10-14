@@ -4,6 +4,6 @@ class Routine < ApplicationRecord
   has_many :subroutines
 
   def date_format
-    self.end_date.strftime("%m/%m/%Y")
+    a = self.end_date.strftime("%Y-%m-%d").to_date
   end
 end
