@@ -2,9 +2,8 @@
   'use strict';
   var NewRoComponent = {
     restrict: 'E',
-    controller: function (RoutinesService, $scope) {
+    controller: function (RoutinesService, $scope, $timeout) {
       var ctrl = this
-      debugger;
 
       ctrl.addNew = function () {
         var routine = {
@@ -15,8 +14,9 @@
             }
         this.routines.push(routine)
         RoutinesService.postRoutine(routine)
-
       }
+
+      
 
     },
     controllerAs: 'newRoCtrl',

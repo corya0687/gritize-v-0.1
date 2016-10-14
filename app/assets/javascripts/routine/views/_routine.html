@@ -1,15 +1,14 @@
 <td>
-  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name "{ updateOn: 'blur', debounce: {'default': 1000, 'blur': 2000} }" >
+  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name >
 </td>
 <td>
-  {{routineCtrl.routine.description}}
-</td>
+<input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description ></td>
 <td>
   {{routineCtrl.routine.start_date}}
 
 </td>
 <td>
-  {{routineCtrl.routine.end_date}}
+  {{routineCtrl.routine.date_format}}
 
 </td>
 <td>
