@@ -3,7 +3,9 @@
     return {
       restrict: 'EA',
       controller: function () {
-        var ctrl = this
+        var vm = this
+        vm.routine.end_date = new Date(vm.routine.end_date)
+        vm.routine.start_date = new Date(vm.routine.start_date)
       },
       controllerAs: 'routineCtrl',
       templateUrl: 'routine/views/_routine.html',

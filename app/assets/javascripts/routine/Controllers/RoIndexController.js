@@ -22,6 +22,7 @@ function RoIndexController($scope, routines, $filter, $state) {
     ctrl.filteredRoutines = $filter('started')(ctrl.routines)
   }
 
+
   this.refilter();
 
 }

@@ -1,7 +1,9 @@
 function RoutineController(routine) {
 
   var ctrl = this
-  this.routine = routine
+  ctrl.routine = routine
+  debugger;
+  ctrl.routine.date = new Date(ctrl.routine.date)
 }
 
 angular
