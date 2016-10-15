@@ -15,9 +15,6 @@
         this.routines.push(routine)
         RoutinesService.postRoutine(routine)
       }
-
-      
-
     },
     controllerAs: 'newRoCtrl',
     templateUrl: 'routine/views/new_routine.html',

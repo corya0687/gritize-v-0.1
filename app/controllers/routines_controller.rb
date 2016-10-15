@@ -14,6 +14,7 @@ class RoutinesController < ApplicationController
   end
 
   def create
+    binding.pry
     @routine = current_user.routines.build(routine_params)
     @routine.save
   end
@@ -30,6 +31,6 @@ class RoutinesController < ApplicationController
   end
 
   def routine_params
-    params.require(:routine).permit(:name, :user_id, :description, :end_date, :tags => [])
+    params.require(:routine).permit(:name, :user_id, :description, :start_date, :end_date, :tags => [] )
   end
 end

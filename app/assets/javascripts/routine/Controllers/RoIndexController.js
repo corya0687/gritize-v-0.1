@@ -8,6 +8,7 @@ function RoIndexController($scope, routines, $filter, $state) {
     console.log(newValue + 'added')
   });
 
+
   ctrl.search = '';
 
   this.refilter = function () {
