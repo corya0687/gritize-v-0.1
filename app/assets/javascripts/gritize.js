@@ -42,7 +42,7 @@ angular
         })
 
       .state('profile.routine', {
-        url: '/routines/:id',
+        url: '/routines/:id' + '.json',
         views:{
           "@": {
             templateUrl: 'routine/views/show_routine.html',

@@ -8,8 +8,6 @@
         vm.routine.end_date = new Date(vm.routine.end_date)
         vm.routine.start_date = new Date(vm.routine.start_date)
 
-
-
         $scope.$watch('routineCtrl.routine',
         function saveUpdates(newVal, oldVal) {
           if ( newVal !== oldVal) {

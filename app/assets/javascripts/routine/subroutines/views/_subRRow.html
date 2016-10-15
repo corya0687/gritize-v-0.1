@@ -1,9 +1,15 @@
 <td>
-  {{subRCtrl.subroutine.name}}
+  <input class="transparent-input" type="text" ng-model=subRCtrl.subroutine.name ng-model-options="{ debounce: 2000 }" >
 </td>
+
 <td>
-  {{subRCtrl.subroutine.description}}
+  <input class="transparent-input" type="textarea" ng-model=subRCtrl.subroutine.description ng-model-options="{ debounce: 2000 }">
 </td>
+
 <td>
-  {{subRCtrl.subroutine.end_date}}
+  <input class="transparent-input" type="date" ng-model=subRCtrl.subroutine.start_date ng-model-options="{ debounce: 2000 }">
+</td>
+
+<td>
+  <input class="transparent-input" type="date" ng-model=subRCtrl.subroutine.end_date ng-model-options="{ debounce: 2000 }">
 </td>
