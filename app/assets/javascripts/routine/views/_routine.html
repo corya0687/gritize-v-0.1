@@ -1,17 +1,17 @@
 <td>
-  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name >
+  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name ng-model-options="{ debounce: 5000 }" >
 </td>
 
 <td>
-  <input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description>
+  <input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description ng-model-options="{ debounce: 5000 }">
 </td>
 
 <td>
-  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date>
+  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date ng-model-options="{ debounce: 5000 }">
 </td>
 
 <td>
-  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date>
+  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date ng-model-options="{ debounce: 5000 }">
 </td>
 
 <td>

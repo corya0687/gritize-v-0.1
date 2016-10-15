@@ -5,25 +5,18 @@
       controller: function ($scope, $timeout, RoutinesService) {
         var vm = this
         var timeout;
-
         vm.routine.end_date = new Date(vm.routine.end_date)
         vm.routine.start_date = new Date(vm.routine.start_date)
-        vm.saveRoutine = saveRoutine;
 
-        function saveRoutine() {
-          RoutinesService.saveRoutine(routine)
-        }
 
-        var debouceSaveUpdates = function (newValue, OldValue) {
-          if (newValue != oldVal){
-            if(timeout){
-              $timeout.cancel(timeout)
-            }
 
-            timeout = $timeout(saveUpdates, 1000);
+        $scope.$watch('routineCtrl.routine',
+        function saveUpdates(newVal, oldVal) {
+          if ( newVal !== oldVal) {
+            RoutinesService.updateRoutine(vm.routine)
           }
-        };
-        $scope.$watch('vm.routine', debounceSaveUpdates);
+
+        }, true);
       },
       controllerAs: 'routineCtrl',
       templateUrl: 'routine/views/_routine.html',

@@ -2,7 +2,9 @@ function RoutinesService($resource, $http, Auth) {
 
 
   var currentUser = Auth._currentUser
-  var Routine = $resource('users/'+currentUser.id+'/routines/:id.json', {id: '@id'})
+  var Routine = $resource('users/'+currentUser.id+'/routines/:id', {id: '@id'},{
+        'update': { method:'PUT' }
+    })
 
     this.getRoutineIndex = function(){
       return $http.get('/users/'+currentUser.id+'/routines.json')
@@ -13,7 +15,7 @@ function RoutinesService($resource, $http, Auth) {
     }
 
     this.updateRoutine = function (routine) {
-      return Routine.save(routine);
+      return Routine.update(routine);
     }
 
     this.getSubRoutines = function (routine) {

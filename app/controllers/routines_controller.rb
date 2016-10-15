@@ -1,5 +1,5 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: [:show]
+  before_action :set_routine, only: [:show, :update]
 
   def index
     respond_to do |format|
@@ -14,7 +14,6 @@ class RoutinesController < ApplicationController
   end
 
   def create
-    binding.pry
     @routine = current_user.routines.build(routine_params)
     @routine.save
   end
