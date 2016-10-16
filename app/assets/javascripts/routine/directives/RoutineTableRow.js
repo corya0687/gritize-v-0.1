@@ -10,7 +10,6 @@
         vm.active_edit = active_edit;
         vm.toggle_edit = toggle_edit
 
-
         function toggle_edit() {
           if ( vm.active_edit === false || vm.active_edit === '') {
             vm.active_edit = true;
@@ -18,7 +17,7 @@
             vm.active_edit = false;
           }
         }
-
+        
         $scope.$watch('routineCtrl.routine',
         function saveUpdates(newVal, oldVal) {
           if ( newVal !== oldVal) {
