@@ -1,13 +1,31 @@
 <td>
-  <input class="transparent-input" type="text" ng-model=subRCtrl.subroutine.name ng-model-options="{ debounce: 2000 }" >
+  <div ng-show="subRCtrl.active_edit">
+      <input class="transparent-input" type="text" ng-model=subRCtrl.subroutine.name ng-model-options="{ debounce: 2000 }" >
+  </div>
+
+  <div ng-hide="subRCtrl.active_edit">
+    {{subRCtrl.subroutine.name}}
+  </div>
 </td>
 
 <td>
-  <input class="transparent-input" type="textarea" ng-model=subRCtrl.subroutine.description ng-model-options="{ debounce: 2000 }">
+  <div ng-show="subRCtrl.active_edit">
+      <input class="transparent-input" type="textarea" ng-model=subRCtrl.subroutine.description ng-model-options="{ debounce: 2000 }">
+  </div>
+
+  <div ng-hide="subRCtrl.active_edit">
+    {{subRCtrl.subroutine.description}}
+  </div>
 </td>
 
 <td>
-  <input class="transparent-input" type="date" ng-model=subRCtrl.subroutine.end_date ng-model-options="{ debounce: 2000 }">
+  <div ng-show="subRCtrl.active_edit">
+    <input class="transparent-input" type="date" ng-model=subRCtrl.subroutine.end_date ng-model-options="{ debounce: 2000 }">
+  </div>
+
+  <div ng-hide="subRCtrl.active_edit">
+    {{subRCtrl.subroutine.end_date}}
+  </div>
 </td>
 
 <td>
