@@ -18,6 +18,7 @@
 //= require angular-messages
 //= require angular-rails-templates
 //= require angular-ui-router
+//= moment
 //= require gritize
 //= require turbolinks
 //= require_tree .

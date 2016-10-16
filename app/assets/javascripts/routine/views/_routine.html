@@ -1,25 +1,43 @@
 <td>
-  <div ng-if="routineCtrl.active_edit == true">
+  <div ng-show="routineCtrl.active_edit">
     <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name ng-model-options="{ debounce: 5000 }" >
-  </div >
+  </div>
 
-  <div ng-if="routineCtrl.active_edit == false">
+  <div ng-hide="routineCtrl.active_edit">
     {{routineCtrl.routine.name}}
   </div>
 
 </td>
 
 <td>
-  <input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description ng-model-options="{ debounce: 5000 }">
+  <div ng-show="routineCtrl.active_edit">
+    <input class="transparent-input" type="textarea" ng-model=routineCtrl.routine.description ng-model-options="{ debounce: 5000 }">
+  </div>
+
+  <div ng-hide="routineCtrl.active_edit">
+    {{routineCtrl.routine.description}}
+  </div>
+
 </td>
 
 <td>
+  <div ng-show="routineCtrl.active_edit">
   <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date ng-model-options="{ debounce: 5000 }">
+</div>
+
+  <div ng-hide="routineCtrl.active_edit">
+    {{routineCtrl.routine.start_date}}
+  </div>
 </td>
 
 <td>
+  <div ng-show="routineCtrl.active_edit">
+    <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date ng-model-options="{ debounce: 5000 }">
+  </div>
 
-  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date ng-model-options="{ debounce: 5000 }">
+  <div ng-hide="routineCtrl.active_edit">
+    {{routineCtrl.routine.end_date}}
+  </div>
 </td>
 
 <td>
