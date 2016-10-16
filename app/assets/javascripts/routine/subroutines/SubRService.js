@@ -2,7 +2,7 @@
   function SubRService($resource, Auth, $stateParams) {
 
     var currentUser = Auth._currentUser
-    var SubRoutine = $resource('users/'+currentUser.id+'/routines/:routine_id/subroutines', {routine_id: $stateParams.id, id:'@id'},
+    var SubRoutine = $resource('users/'+currentUser.id+'/routines/:routine_id/subroutines/:id' + '.json', {routine_id: $stateParams.id, id:'@id'},
     {
       'update' : {method:'PUT'}
     })

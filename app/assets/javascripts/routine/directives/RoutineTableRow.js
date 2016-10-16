@@ -2,9 +2,8 @@
   function RoutineTableRow() {
     return {
       restrict: 'EA',
-      controller: function ($scope, $timeout, RoutinesService) {
+      controller: function ($scope,RoutinesService) {
         var vm = this
-        var timeout;
         vm.routine.end_date = new Date(vm.routine.end_date)
         vm.routine.start_date = new Date(vm.routine.start_date)
 
