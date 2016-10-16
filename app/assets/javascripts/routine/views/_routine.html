@@ -1,5 +1,12 @@
 <td>
-  <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name ng-model-options="{ debounce: 5000 }" >
+  <div ng-if="routineCtrl.active_edit == true">
+    <input class="transparent-input" type="text" ng-model=routineCtrl.routine.name ng-model-options="{ debounce: 5000 }" >
+  </div >
+
+  <div ng-if="routineCtrl.active_edit == false">
+    {{routineCtrl.routine.name}}
+  </div>
+
 </td>
 
 <td>
@@ -11,9 +18,13 @@
 </td>
 
 <td>
+
   <input class="transparent-input" type="date" ng-model=routineCtrl.routine.end_date ng-model-options="{ debounce: 5000 }">
 </td>
 
 <td>
-  <a href="" ui-sref="profile.routine({id: routineCtrl.routine.id})">View Routine</a>
+  <a href="" ui-sref="profile.routine({id: routineCtrl.routine.id})">Manage Tasks</a>
+  <button ng-click="routineCtrl.toggle_edit()" type="button" name="button">Edit</button>
+  <button type="button" name="button">X</button>
+  <button type="button" name="button">Done</button>
 </td>

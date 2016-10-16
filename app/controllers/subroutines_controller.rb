@@ -1,4 +1,6 @@
 class SubroutinesController < ApplicationController
+  before_action :set_subroutine, only: [:show, :update]
+
   def index
 
   end
@@ -11,7 +13,8 @@ class SubroutinesController < ApplicationController
   end
 
   def update
-
+    @sub_routine.update(subroutine_params)
+    @sub_routine.save
   end
 
   def show
@@ -20,11 +23,11 @@ class SubroutinesController < ApplicationController
 
   private
 
-    def set_routine
+    def set_subroutine
       @sub_routine = Subroutine.find(params[:id])
     end
 
     def subroutine_params
-      params.require(:subroutine).permit(:name, :description, :end_date)
+      params.require(:subroutine).permit(:name, :description, :end_date, :completed)
     end
 end
