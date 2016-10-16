@@ -1,6 +1,5 @@
 function RoutinesService($resource, $http, Auth) {
 
-
   var currentUser = Auth._currentUser
   var Routine = $resource('users/'+currentUser.id+'/routines/:id.json', {id: '@id'},{
         'update': { method:'PUT' }
@@ -24,6 +23,10 @@ function RoutinesService($resource, $http, Auth) {
 
     this.postRoutine = function(routine) {
       return Routine.save(routine);
+    }
+
+    this.deleteRoutine = function (routine) {
+      return Routine.delete(routine)
     }
 }
 
