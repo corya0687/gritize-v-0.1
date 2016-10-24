@@ -20,11 +20,11 @@
           }
         }
 
-        function deleteSubR(routine) {
-          SubRService.deleteSubR(routine);
-          vm.routines.forEach(function (r) {
-            if( r.id === routine.id ){
-              vm.routines.shift();
+        function deleteSubR(subR) {
+          SubRService.deleteSubR(subR);
+          vm.routine.subRoutines.forEach(function (sR) {
+            if( sR.id === subR.id ){
+              vm.routine.subRoutine.shift();
             }
           })
         }
