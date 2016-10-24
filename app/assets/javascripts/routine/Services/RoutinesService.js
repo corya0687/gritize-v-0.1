@@ -1,8 +1,10 @@
 function RoutinesService($resource, $http, Auth) {
 
   var currentUser = Auth._currentUser
-  var Routine = $resource('users/'+currentUser.id+'/routines/:id.json', {id: '@id'},{
+  var Routine = $resource('users/'+currentUser.id+'/routines/:id', {id: '@id'},{
         'update': { method:'PUT' }
+    }, {
+        'delete': { method: 'DELETE' }
     })
 
     this.getRoutineIndex = function(){

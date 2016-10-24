@@ -15,18 +15,18 @@
   </div>
 
   <div ng-hide="routineCtrl.active_edit">
-    {{routineCtrl.routine.description}}
+    {{ routineCtrl.routine.description }}
   </div>
 
 </td>
 
 <td>
   <div ng-show="routineCtrl.active_edit">
-  <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date ng-model-options="{ debounce: 5000 }">
-</div>
+    <input class="transparent-input" type="date" ng-model=routineCtrl.routine.start_date ng-model-options="{ debounce: 5000 }">
+  </div>
 
   <div ng-hide="routineCtrl.active_edit">
-    {{routineCtrl.routine.start_date}}
+    {{ routineCtrl.routine.start_date }}
   </div>
 </td>
 
@@ -36,13 +36,13 @@
   </div>
 
   <div ng-hide="routineCtrl.active_edit">
-    {{routineCtrl.routine.end_date}}
+    {{ routineCtrl.routine.end_date }}
   </div>
 </td>
 
 <td>
   <a href="" ui-sref="profile.routine({id: routineCtrl.routine.id})">Manage Tasks</a>
   <button ng-click="routineCtrl.toggle_edit()" type="button" name="button">Edit</button>
-  <button type="button" name="button">X</button>
-  <button type="button" name="button">Done</button>
+  <button type="button" ng-click="routineCtrl.delete_routine(routineCtrl.routine)" name="button">X</button>
+  <button  type="button" name="button">Done</button>
 </td>

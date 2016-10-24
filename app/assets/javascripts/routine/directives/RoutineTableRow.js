@@ -9,7 +9,7 @@
         vm.routine.start_date = new Date(vm.routine.start_date);
         vm.active_edit = active_edit;
         vm.toggle_edit = toggle_edit;
-        vm.delete_routine = delete_routine;
+        vm.delete_routine = deleteRoutine;
 
         function toggle_edit() {
           if ( vm.active_edit === false || vm.active_edit === '') {
@@ -18,9 +18,10 @@
             vm.active_edit = false;
           }
         }
-
-        function deleteRoutine(vm.routine) {
-          RoutinesService.deleteRoutine(vm.routine)
+        
+        function deleteRoutine(routine) {
+          debugger;
+          RoutinesService.deleteRoutine(routine)
         }
 
         $scope.$watch('routineCtrl.routine',

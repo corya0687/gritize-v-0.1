@@ -1,5 +1,5 @@
 class RoutinesController < ApplicationController
-  before_action :set_routine, only: [:show, :update]
+  before_action :set_routine, only: [:show, :update, :destroy]
 
   def index
     respond_to do |format|
@@ -21,6 +21,10 @@ class RoutinesController < ApplicationController
   def update
     @routine.update(routine_params)
     @routine.save
+  end
+
+  def destroy
+    @routine.delete
   end
 
   private
