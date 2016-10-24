@@ -20,6 +20,15 @@
           }
         }
 
+        function deleteSubR(routine) {
+          SubRService.deleteSubR(routine);
+          vm.routines.forEach(function (r) {
+            if( r.id === routine.id ){
+              vm.routines.shift();
+            }
+          })
+        }
+
         $scope.$watch('subRCtrl.subroutine',
         function saveUpdates(newVal, oldVal) {
           if ( newVal !== oldVal) {
