@@ -25,6 +25,7 @@ class RoutinesController < ApplicationController
 
   def destroy
     @routine.delete
+    @routine.save
   end
 
   private

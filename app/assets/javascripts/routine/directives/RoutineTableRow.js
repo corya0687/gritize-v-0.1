@@ -18,10 +18,14 @@
             vm.active_edit = false;
           }
         }
-        
+
         function deleteRoutine(routine) {
-          debugger;
-          RoutinesService.deleteRoutine(routine)
+          RoutinesService.deleteRoutine(routine);
+          vm.routines.forEach(function (r) {
+            if( r.id === routine.id ){
+              vm.routines.shift();
+            }
+          })
         }
 
         $scope.$watch('routineCtrl.routine',
@@ -36,6 +40,7 @@
       scope: {
         routine: '=',
         user: '=',
+        routines: '='
       },
       bindToController: true
     }
