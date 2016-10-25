@@ -1,10 +1,6 @@
 class SubroutinesController < ApplicationController
   before_action :set_subroutine, only: [:show, :update, :destroy]
 
-  def index
-
-  end
-
   def create
     @routine = Routine.find(params[:routine_id])
     @routine.subroutines.build(subroutine_params)

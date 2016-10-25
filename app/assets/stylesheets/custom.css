@@ -13,20 +13,31 @@
   color: #fff;
 }
 
-.nav-bg {
-  background-color: #383838;
+.navbar-full {
+  background-color: #8B0000;
 }
 
 .navbar {
-  background-color: #383838;
+  border-radius: 0px;
 }
 
-.navbar-full {
-  background-color: #383838;
+.navbar-nav{
+  float: right;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
+.grit-icon {
+  display: inline-flex;
+  border-right: 1px #fff solid;
+  padding: 5px;
+  width: 85px;
+  height: 85px;
+
+}
 .btn {
-  background-color: #383838;
+  background-color: #8B0000;
   color: #fff;
   margin-left: 2px;
+  width: 50%;
 }

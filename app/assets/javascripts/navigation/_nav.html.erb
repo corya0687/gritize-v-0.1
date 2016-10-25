@@ -1,4 +1,8 @@
 <div class="navbar navbar-full navbar-dark nav-bg"  ng-controller="NavBarController">
+  <div class="grit-icon">
+    <%= image_tag 'grit-icon.png', size:"75x75"%>
+  </div>
+
   <ul class="nav navbar-nav " style="color: white;">
     <li><a a class="c-links"  href="#/home">Home</a></li>
     <li ng-hide="signedIn()"><a class="c-links"  href="#/login">Log In</a></li>
