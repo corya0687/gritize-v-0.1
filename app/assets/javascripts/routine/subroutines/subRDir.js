@@ -10,7 +10,8 @@
         var active_edit = false;
         vm.subroutine.end_date = new Date(vm.subroutine.end_date)
         vm.active_edit = active_edit;
-        vm.toggle_edit = toggle_edit
+        vm.toggle_edit = toggle_edit;
+        vm.deleteSubR = deleteSubR;
 
         function toggle_edit() {
           if ( vm.active_edit === false || vm.active_edit === '') {
@@ -21,10 +22,11 @@
         }
 
         function deleteSubR(subR) {
-          SubRService.deleteSubR(subR);
-          vm.routine.subRoutines.forEach(function (sR) {
+          SubRService.deleteSubR(vm.subroutine);
+          debugger;
+          vm.routine.subroutines.forEach(function (sR) {
             if( sR.id === subR.id ){
-              vm.routine.subRoutine.shift();
+              vm.routine.subroutines.shift();
             }
           })
         }
