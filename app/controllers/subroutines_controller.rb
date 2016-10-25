@@ -1,12 +1,11 @@
 class SubroutinesController < ApplicationController
-  before_action :set_subroutine, only: [:show, :update]
+  before_action :set_subroutine, only: [:show, :update, :destroy]
 
   def index
 
   end
 
   def create
-    binding.pry
     @routine = Routine.find(params[:routine_id])
     @routine.subroutines.build(subroutine_params)
     @routine.save
@@ -17,8 +16,8 @@ class SubroutinesController < ApplicationController
     @sub_routine.save
   end
 
-  def show
-
+  def destroy
+    @sub_routine.delete
   end
 
   private
