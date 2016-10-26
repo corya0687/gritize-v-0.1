@@ -1,6 +1,11 @@
 
 * {
   font-family: 'Open Sans', sans-serif;
+
+}
+
+* a {
+  color: #8B0000;
 }
 
 .transparent-input {
@@ -22,7 +27,7 @@
   background-color: #8B0000;
 }
 
-.pro-page-header h1 {
+.pro-page-header h3 {
   margin-top: 0px;
 }
 
@@ -31,16 +36,24 @@
   background-color: #3a3a3a;
 }
 
+.panel-default>.panel-heading a {
+  color: #e67e22;
+}
+
 .navbar {
   border-radius: 0px;
   box-shadow: 2px 2px #493636;
 
 }
-
+#profile-name {
+  margin-right: 5%;
+  float:right;
+  font-size: 14px;
+  padding-top: 50px;
+}
 .navbar-nav{
-  float: right;
-  margin-right: 60%;
-  padding-top:25px;
+  margin-left: 32%;
+  padding-top:35px;
   font-size: 18px
 }
 
@@ -51,8 +64,19 @@
   width: 85px;
   height: 85px;
   box-shadow: 2px 2px #493636;
-
+  float:left;
+  font-size: 9px;
 }
+
+.grit-icon span{
+  padding: 1px;
+}
+
+.grit-icon img {
+  position: absolute;
+}
+
+
 .btn {
   background-color: #8B0000;
   color: #fff;
