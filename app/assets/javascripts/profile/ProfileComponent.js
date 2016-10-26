@@ -3,6 +3,7 @@ var ProfileComponent = {
   templateUrl: 'profile/_stats.html',
   controller: function ($scope, $filter, VimeoFactory) {
     var vm = this
+    var roArray;
     vm.firstFiveRoutines = firstFiveRoutines();
     vm.completedRoutines = completedRoutines();
     vm.vid;
@@ -19,12 +20,12 @@ var ProfileComponent = {
     }
 
     function firstFiveRoutines() {
-      let roArray= vm.user.routines
+      roArray= vm.user.routines;
       return vm.user.routines.slice(roArray.length - 5 ,roArray.length).reverse()
     }
 
     function completedRoutines() {
-      let roArray = vm.user.routines
+      roArray = vm.user.routines;
       roArray= $filter('pastRoutines')(roArray)
       return roArray.slice(roArray.length - 5 ,roArray.length).reverse()
     }
