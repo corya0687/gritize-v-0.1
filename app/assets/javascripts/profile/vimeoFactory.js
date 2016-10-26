@@ -28,7 +28,7 @@
     }
 
     function randomVid(vids) {
-      let randomNum = Math.floor((Math.random()*25) + 1)
+      var randomNum = Math.floor((Math.random()*25) + 1)
       return vids.data[randomNum]
     }
 
