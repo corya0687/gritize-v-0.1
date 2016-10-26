@@ -8,7 +8,7 @@
     }
 
     function getVid() {
-      let page = randomPage();
+      var page = randomPage();
       var req = {
         method: 'GET',
         url: 'https://api.vimeo.com/tags/motivation/videos?page=' + page,
