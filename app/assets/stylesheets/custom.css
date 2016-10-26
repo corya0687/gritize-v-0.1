@@ -1,3 +1,8 @@
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .transparent-input {
   background: transparent;
   border: none;
@@ -17,16 +22,26 @@
   background-color: #8B0000;
 }
 
+.pro-page-header h1 {
+  margin-top: 0px;
+}
+
+.panel-default>.panel-heading {
+  color: white;
+  background-color: #3a3a3a;
+}
+
 .navbar {
   border-radius: 0px;
   box-shadow: 2px 2px #493636;
-  
+
 }
 
 .navbar-nav{
   float: right;
-  margin-right: 10px;
-  vertical-align: middle;
+  margin-right: 60%;
+  padding-top:25px;
+  font-size: 18px
 }
 
 .grit-icon {

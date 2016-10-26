@@ -1,27 +1,43 @@
 
-<div class="page-header text-center">
+<div class="pro-page-header text-center">
   <h1 >Your Profile </h1>
   <h5>You Have {{proCtrl.user.routines.length}} total routines</h5>
 </div>
 <div class="row">
+
   <div class="col-md-6">
-    <h4 class="text-center inline-header">Recently Created Routines</h4>
-    <a href="#" ui-sref="profile.routines({user_id:user.id})">See All </a>
-    <table class="table table-striped">
-        <thead>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-heading text-center inline-header">Recently Created Routines</h4>
+        <a class="pull-right" href="#" ui-sref="profile.routines({user_id:user.id})">See All > </a>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+            <thead>
 
-          <tr>
-            <th>
-             Name
-            </th>
-            <th>
-              Description
-            </th>
-          </tr>
-        </thead>
+              <tr>
+                <th>
+                 Name
+                </th>
+                <th>
+                  Description
+                </th>
+                <th>
+                 Start Date
+                </th>
+                <th>
+                  End Date
+                </th>
+              </tr>
+            </thead>
 
-      <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
-    </table>
+          <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+        </table>
+      </div>
+
+    </div>
+
+
   </div>
   <div class="col-md-6 ">
     <h4 class="text-center inline-header">Recently Completed Routines</h4>
