@@ -28,6 +28,8 @@ function RoIndexController($scope, routines, $filter, $state) {
 
 }
 
+RoIndexController.$inject = ['$scope', 'routines', '$filter', '$state']
+
 angular
   .module('gritize')
   .controller('RoIndexController', RoIndexController)

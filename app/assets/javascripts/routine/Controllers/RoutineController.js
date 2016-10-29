@@ -4,6 +4,7 @@ function RoutineController(routine) {
   ctrl.routine = routine
 }
 
+RoutineController.$inject = ['routine'];
 angular
   .module('gritize')
   .controller('RoutineController', RoutineController)

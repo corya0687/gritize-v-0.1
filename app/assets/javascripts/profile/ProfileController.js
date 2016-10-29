@@ -9,6 +9,9 @@ function ProfileController(user, $scope, $location ) {
     console.log("Deep updated user object" + newValue)
   }, true)
 }
+
+ProfileController.$inject = ['user', '$scope', '$location'];
+
 angular
   .module('gritize')
   .controller('ProfileController', ProfileController)
