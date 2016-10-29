@@ -41,6 +41,8 @@
     }
   }
 
+  VimeoFactory.$inject = ['$http'];
+
   angular
     .module('gritize')
     .factory('VimeoFactory', VimeoFactory)

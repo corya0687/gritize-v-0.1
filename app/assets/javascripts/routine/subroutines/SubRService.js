@@ -25,6 +25,8 @@
     }
   }
 
+  SubRService.$inject = ['$resource', 'Auth', '$stateParams']
+
   angular
     .module('gritize')
     .service('SubRService', SubRService)

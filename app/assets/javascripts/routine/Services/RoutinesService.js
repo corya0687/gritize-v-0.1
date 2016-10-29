@@ -32,6 +32,8 @@ function RoutinesService($resource, $http, Auth) {
     }
 }
 
+RoutinesService.$inject = ['$resource', '$http', 'Auth']
+
 angular
   .module('gritize')
   .service('RoutinesService', RoutinesService)
