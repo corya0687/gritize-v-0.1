@@ -12,6 +12,8 @@ function AuthController($scope, $state, Auth) {
  };
 }
 
+AuthController.$inject = ['$scope', '$state', 'Auth'];
+
 angular
   .module('gritize')
   .controller('AuthController', AuthController)

@@ -1,6 +1,6 @@
 function NavBarController($scope, Auth) {
   var ctrl = this
-  
+
   $scope.signedIn = Auth.isAuthenticated;
   $scope.logout = Auth.logout;
   Auth.currentUser().then(function (user){
@@ -19,6 +19,8 @@ function NavBarController($scope, Auth) {
    });
 
 }
+
+NavBarController.$inject = ['$scope', 'Auth']
 
 angular
   .module('gritize')
