@@ -5,7 +5,6 @@
 #   gem 'sqlite3'
 #
 
-
 development:
   adapter: postgresql
   database: gritize_db
