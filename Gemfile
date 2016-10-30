@@ -47,6 +47,7 @@ group :development do
 end
 
 group :production do
+  gem 'listen', '~> 3.0.5'
   gem 'pg'
   gem 'rails_12factor'
 end
