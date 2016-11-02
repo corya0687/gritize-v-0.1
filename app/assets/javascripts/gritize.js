@@ -13,11 +13,11 @@ angular
         templateUrl: 'profile/profile.html',
         controller: 'ProfileController as proCtrl',
         resolve: {
-          user: function (Auth) {
+          user: ['Auth', function (Auth) {
             return Auth.currentUser().then(function (user){
               return user;
             })
-          }
+          }]
         }
       })
 
@@ -28,14 +28,14 @@ angular
               templateUrl: 'routine/views/routine_index.html',
               controller: 'RoIndexController as roiCtrl',
               resolve: {
-                routines: function(RoutinesService) {
+                routines: ['RoutinesService', function(RoutinesService) {
                   return RoutinesService.getRoutineIndex()
-                },
-                user: function (Auth) {
+                }],
+                user: ['Auth', function (Auth) {
                   return Auth.currentUser().then(function (user){
                     return user;
                   })
-                }
+                }]
               }
             }
           }
