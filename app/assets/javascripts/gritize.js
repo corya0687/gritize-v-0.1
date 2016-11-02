@@ -48,9 +48,9 @@ angular
             templateUrl: 'routine/views/show_routine.html',
             controller: 'RoutineController as routineCtrl',
             resolve: {
-              routine: function($stateParams, RoutinesService) {
+              routine: ['$stateParams', 'RoutinesService', function($stateParams, RoutinesService) {
                 return RoutinesService.getRoutine($stateParams.id).$promise;
-              }
+              }]
             }
           }
         }
