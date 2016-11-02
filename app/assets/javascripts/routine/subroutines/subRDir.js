@@ -5,7 +5,7 @@
   function SubRoutine() {
     return {
       restrict: 'EA',
-      controller: ['$scope', 'SubRService', function ($scope, SubRService) {
+      controller: function ($scope, SubRService) {
         var vm = this;
         var active_edit = false;
         vm.subroutine.end_date = new Date(vm.subroutine.end_date)
@@ -37,7 +37,7 @@
             SubRService.updateSubR(vm.subroutine)
           }
         }, true);
-      }],
+      },
       templateUrl: 'routine/subroutines/views/_subRRow.html',
       controllerAs: 'subRCtrl',
       scope: {
