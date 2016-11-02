@@ -1,7 +1,7 @@
 var ProfileComponent = {
   restrict: 'E',
   templateUrl: 'profile/_stats.html',
-  controller: function ($scope, $filter, VimeoFactory) {
+  controller: ['$scope', '$filter', 'VimeoFactory', function ($scope, $filter, VimeoFactory) {
     var vm = this
     var roArray;
     vm.firstFiveRoutines = firstFiveRoutines();
@@ -34,7 +34,7 @@ var ProfileComponent = {
       vm.vid = response;
     }
 
-  },
+  }],
   controllerAs: 'proCtrl',
   bindings: {
     user: '='  }
