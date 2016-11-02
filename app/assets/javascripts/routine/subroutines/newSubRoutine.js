@@ -3,7 +3,7 @@
 
   var NewSubRoutine = {
     restrict: 'E',
-    controller: function (SubRService) {
+    controller:['SubRService', function (SubRService) {
       var vm = this;
 
       this.newSubRoutine = newSubRoutine;
@@ -19,7 +19,7 @@
         SubRService.postSubR(newSubR);
       }
 
-    },
+    }],
     controllerAs: 'newSubRCtrl',
     templateUrl: 'routine/subroutines/views/_newSubR.html',
     bindings: {
