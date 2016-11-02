@@ -2,7 +2,7 @@
   function RoutineTableRow() {
     return {
       restrict: 'EA',
-      controller: function ($scope,RoutinesService) {
+      controller: ['$scope', 'RoutinesService', function ($scope, RoutinesService) {
         var vm = this;
         var active_edit = false
         vm.routine.end_date = new Date(vm.routine.end_date);
@@ -34,7 +34,7 @@
             RoutinesService.updateRoutine(vm.routine)
           }
         }, true);
-      },
+      }],
       controllerAs: 'routineCtrl',
       templateUrl: 'routine/views/_routine.html',
       scope: {
