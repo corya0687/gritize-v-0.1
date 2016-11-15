@@ -50,6 +50,10 @@ group :production do
   gem 'listen', '~> 3.0.5'
   gem 'pg'
   gem 'rails_12factor'
+  gem 'web-console'
+  gem 'spring'
+  gem 'byebug', platform: :mri
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 

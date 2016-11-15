@@ -43,18 +43,19 @@
 .navbar {
   border-radius: 0px;
   box-shadow: 2px 2px #493636;
-
 }
+
 #profile-name {
   margin-right: 5%;
-  float:right;
+  float: right;
   font-size: 14px;
   padding-top: 50px;
 }
-.navbar-nav{
+
+.navbar-nav {
   margin-left: 32%;
-  padding-top:35px;
-  font-size: 18px
+  padding-top: 35px;
+  font-size: 18px;
 }
 
 .grit-icon {
@@ -84,5 +85,5 @@
 }
 
 .search {
-  
+
 }
