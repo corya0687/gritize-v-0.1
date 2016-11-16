@@ -24,7 +24,11 @@
 }
 
 .navbar-full {
-  background-color: #8B0000;
+  background-color: #3a3a3a;
+}
+
+.form-control {
+  margin-bottom: 8px;
 }
 
 .pro-page-header h3 {
