@@ -1,8 +1,9 @@
-function NavBarController($scope, Auth) {
+function NavBarController($scope, Auth, $state) {
   var ctrl = this
 
   $scope.signedIn = Auth.isAuthenticated;
   $scope.logout = Auth.logout;
+
   Auth.currentUser().then(function (user){
    $scope.user = user;
   });
@@ -16,11 +17,12 @@ function NavBarController($scope, Auth) {
 
    $scope.$on('devise:logout', function (e, user){
      $scope.user = {};
+     $state.go('login');
    });
 
 }
 
-NavBarController.$inject = ['$scope', 'Auth']
+NavBarController.$inject = ['$scope', 'Auth', '$state']
 
 angular
   .module('gritize')

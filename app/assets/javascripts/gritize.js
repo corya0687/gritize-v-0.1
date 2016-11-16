@@ -78,9 +78,7 @@ angular
           })
         }]
       });
-
-
-
+      
       $urlRouterProvider.otherwise('home');
 
     }])
