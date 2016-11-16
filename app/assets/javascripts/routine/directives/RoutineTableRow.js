@@ -21,6 +21,7 @@
 
         function deleteRoutine(routine) {
           RoutinesService.deleteRoutine(routine);
+          debugger;
           vm.routines.forEach(function (r) {
             if( r.id === routine.id ){
               vm.routines.shift();

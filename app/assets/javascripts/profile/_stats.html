@@ -31,7 +31,7 @@
               </tr>
             </thead>
 
-          <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+          <tr ng-repeat="routine in proCtrl.firstFiveRoutines" routine-table-row user="proCtrl.user" routine="routine" routines= "proCtrl.firstFiveRoutines"></tr>
         </table>
       </div>
     </div>
@@ -63,7 +63,7 @@
               </tr>
             </thead>
 
-        <tr ng-repeat="routine in proCtrl.completedRoutines" routine-table-row user="proCtrl.user" routine="routine"></tr>
+        <tr ng-repeat="routine in proCtrl.completedRoutines" routine-table-row user="proCtrl.user" routine="routine" routines="proCtrl.completedRoutines"></tr>
         </table>
       </div>
     </div>
