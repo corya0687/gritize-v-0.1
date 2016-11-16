@@ -14,7 +14,6 @@ class RoutinesController < ApplicationController
   end
 
   def create
-    binding.pry
     @routine = current_user.routines.build(routine_params)
     @routine.save
   end
