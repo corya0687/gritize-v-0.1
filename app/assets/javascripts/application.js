@@ -20,5 +20,4 @@
 //= require angular-ui-router
 //= moment
 //= require gritize
-//= require turbolinks
 //= require_tree .

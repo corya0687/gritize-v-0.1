@@ -18,7 +18,7 @@ gem 'angular-rails-templates'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -51,7 +51,6 @@ group :production do
   gem 'listen', '~> 3.0.5'
   gem 'pg'
   gem 'rails_12factor'
-
   gem 'spring'
   gem 'byebug', platform: :mri
   gem 'spring-watcher-listen', '~> 2.0.0'
