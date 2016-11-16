@@ -42,7 +42,10 @@
 
 <td>
   <a href="" ui-sref="profile.routine({id: routineCtrl.routine.id})">Tasks</a>
-  <span class="glyphicon glyphicon-pencil" ng-click="routineCtrl.toggle_edit()" type="text" ></span>
-  <span class="glyphicon glyphicon-remove" type="text" ng-click="routineCtrl.delete_routine(routineCtrl.routine)" name="button"></span>
-  <span class="glyphicon glyphicon-ok"  type="text" name="button"></span>
+  <div class="change-btns">
+    <span id="edit-btn" class="glyphicon glyphicon-pencil" ng-click="routineCtrl.toggle_edit()" type="text" ></span>
+    <span id="delete-btn" class="glyphicon glyphicon-remove" type="text" ng-click="routineCtrl.delete_routine(routineCtrl.routine)" name="button"></span>
+    <span id="complete-btn" class="glyphicon glyphicon-ok"  type="text" name="button"></span>
+  </div>
+
 </td>

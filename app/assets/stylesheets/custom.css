@@ -27,6 +27,21 @@
   background-color: #3a3a3a;
 }
 
+#delete-btn:active {
+  color:#8B0000;
+  font-weight:bold;
+}
+
+#edit-btn:active {
+  color:#8B0000;
+  font-weight:bold;
+}
+
+#complete-btn:active {
+  color:#8B0000;
+  font-weight:bold;
+}
+
 .form-control {
   margin-bottom: 8px;
 }
