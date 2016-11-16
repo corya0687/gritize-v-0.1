@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014232926) do
+ActiveRecord::Schema.define(version: 20161116150153) do
 
   create_table "routine_tags", force: :cascade do |t|
     t.integer  "routine_id"
